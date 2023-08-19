@@ -153,7 +153,7 @@ max_rand = 100
 #エリート選択時の下限順位
 lower_limit = 5
 #世代
-generation = 20000
+generation = 2000
 #評価関数
 def A(x):
     y = (x-12)^(2)-10
@@ -208,16 +208,16 @@ fig = go.Figure()
 fig.add_trace(
     go.Scatter(x = gen_number, #X_label
                y = element_0, #y_label
-              text = "y=(x-12)²-10", #
+              text = "(x-12)²-10", #
               mode = 'lines', #折れ線グラフ
-              name = '(x-12)²-10', #line_name
+              name = 'y=(x-12)²-10', #line_name
               line=dict(color='rgb(239, 85, 59)', width=1, dash='solid') #line_type_detail      
     )
 )
 fig.add_trace(
     go.Scatter(x = gen_number,
                y = element_1,
-              text = "y=-(x-12)²+10",
+              text = "-(x-12)²+10",
               mode = 'lines',
               name = 'y=-(x-12)²+10',
               line=dict(color='rgb(25, 211, 243)', width=1, dash='solid')  
@@ -228,9 +228,9 @@ fig.add_trace(
 fig.add_trace(
     go.Scatter(x = gen_number,
                y = element_2,
-              text = "y=x³+x²+x+1",
+              text = "x³+x²+x+1",
               mode = 'lines',
-              name = 'x³+x²+x+1',
+              name = 'y=x³+x²+x+1',
               line=dict(color='rgb(188, 189, 34)', width=1, dash='solid'),
               
     )
@@ -239,9 +239,9 @@ fig.add_trace(
 fig.add_trace(
     go.Scatter(x = gen_number,
                y = element_3,
-              text = "y=-x³-x²-x-1",
+              text = "-x³-x²-x-1",
               mode = 'lines',
-              name = '-x³-x²-x-1',
+              name = 'y=-x³-x²-x-1',
               line=dict(color='firebrick', width=1, dash='solid'),
     )
 )
@@ -251,7 +251,7 @@ fig.add_trace(
                y = element_4,
               text = "-x+10",
               mode = 'lines',
-              name = '-x+10',
+              name = 'y=-x+10',
               line=dict(color='rgb(48, 73, 125)', width=1, dash='solid'),
     )
 )
@@ -261,7 +261,7 @@ fig.add_trace(
                y = element_5,
               text = "x+10",
               mode = 'lines',
-              name = 'x+10',
+              name = 'y=x+10',
               line=dict(color='rgb(255, 185, 0)', width=1, dash='solid'),
     )
 )
